@@ -323,6 +323,7 @@ object Main {
   }
 
   // changeTheaterMovie (only if no seat sold => all still 50)
+
   def changeTheaterMovie(
                           idTheater: Int,
                           films: Array[String],
