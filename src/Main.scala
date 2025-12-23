@@ -3,13 +3,16 @@ import scala.util.Random
 
 object Main {
 
-  // ==========================
+
   // Global data
-  // ==========================
+
   var theaterCount: Int = 4
 
   var movies: Array[String] =
-    Array("The Mystery of the Forest", "Interstellar Journey", "No movie scheduled", "No movie scheduled")
+    Array("No movie scheduled",
+      "No movie scheduled",
+      "No movie scheduled",
+      "No movie scheduled")
 
   var seats14h: Array[Int] = Array(50, 50, 50, 50)
   var seats17h: Array[Int] = Array(50, 50, 50, 50)
@@ -24,9 +27,8 @@ object Main {
 
   var isProgramRunning: Boolean = true
 
-  // ==========================
   // Helpers
-  // ==========================
+
   def stopProgram(): Unit = {
     isProgramRunning = false
     println("Exiting the program. Goodbye!")
@@ -66,9 +68,9 @@ object Main {
     println("3) Exit")
   }
 
-  // ==========================
+
   // Client mode
-  // ==========================
+
 
   def selectMovies(): Int = {
     println("Client mode")
@@ -111,9 +113,9 @@ object Main {
     }
   }
 
-  // ==========================
+
   // MANDATORY METHODS
-  // ==========================
+
 
   // validatePin (single attempt only!)
   def validatePin(idTheater: Int, pins: Array[String]): Boolean = {
@@ -237,9 +239,9 @@ object Main {
   }
 
 
-  // ==========================
+
   // Admin mode
-  // ==========================
+
   def selectTheaterForAdmin(): Int = {
     println("Select a theater for administration:")
     for (i <- 0 until theaterCount) {
@@ -346,9 +348,9 @@ object Main {
     }
   }
 
-  // ==========================
+
   // Main
-  // ==========================
+
   def main(args: Array[String]): Unit = {
     do {
       showMainMenu()
